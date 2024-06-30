@@ -1,10 +1,21 @@
 ---
 import LandingLayout from "../layouts/LandingLayout.astro";
 import Hero from "../components/Hero.astro";
+
+const pageTitle = "Home - Pomotto";
+const pageDescription =
+	"A distraction-free, guided pomodoro timer for makers. Sustainable work sessions to get things done and preserve your energy.";
+const pageUrl = "https://www.pomotto.app";
+const pageImage = "https:/www.pomotto.app/images/pomotto.jpg";
 ---
 
 <script async src="https://tally.so/widgets/embed.js"></script>
 
-<LandingLayout title="Home - Pomotto">
+<LandingLayout
+	title={pageTitle}
+	description={pageDescription}
+	url={pageUrl}
+	image={pageImage}
+>
 	<Hero />
 </LandingLayout>
