@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.pomotto.app/sitemap-index.xml
