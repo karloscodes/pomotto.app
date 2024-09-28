@@ -1,10 +1,13 @@
 ---
+
 ---
+
 <style>
   .highlight {
     position: relative;
     display: inline-block;
   }
+
   .highlight::before {
     content: "";
     position: absolute;
@@ -12,12 +15,14 @@
     left: 0;
     right: 0;
     bottom: 0.2em;
+    /* background: #ebef0b; */
     background: #04f0f8df;
     z-index: -1;
     border-radius: 0.2em;
     transform: rotate(-2deg);
   }
 </style>
+
 <section
   class="flex-grow flex flex-col items-center justify-center text-center"
 >
@@ -28,11 +33,14 @@
       Pomotto
     </h1>
     <h2 class="mt-8 text-2xl sm:text-2xl leading-8">
-      <span class="highlight">Harness your hyperfocus</span> without losing touch with the world
+      A distraction-free, guided <span class="highlight">pomodoro</span> timer for
+      <span class="highlight">makers</span>
     </h2>
+
     <h2 class="mb-8 text-2xl sm:text-xl leading-8">
       <span class="highlight">Get things done</span> and <span class="highlight"
-        >preserve energy</span> throughout the day
+        >preserve your energy.</span
+      >
     </h2>
     <div
       class="bg-white shadow-md p-2 inline-block rounded-lg border border-gray-200 mt-6"
@@ -43,6 +51,7 @@
         class="w-32 lg:w-48 mx-auto rounded-md"
       />
     </div>
+
     <!-- Download Button Section -->
     <div
       class="order-1 lg:order-2 mt-10 flex items-center justify-center gap-x-6"
@@ -55,25 +64,26 @@
         />
       </a>
     </div>
+
     <!-- Top Features Section -->
     <div class="order-2 lg:order-1 mt-12 w-full">
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
         <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
-          <h4 class="text-xl font-semibold mb-2">Unobtrusive Design</h4>
+          <h4 class="text-xl font-semibold mb-2">Distraction free</h4>
           <p class="text-gray-700">
-             Lives in your status bar, staying out of your way
+            Sits in the status bar to avoid interfering with your work
           </p>
         </div>
         <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
-          <h4 class="text-xl font-semibold mb-2">Sound Reminders</h4>
+          <h4 class="text-xl font-semibold mb-2">Sound notifications</h4>
           <p class="text-gray-700">
-             Gentle sounds pull you out of deep focus
+            Guides you throughout sessions to engage and rest
           </p>
         </div>
         <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
-          <h4 class="text-xl font-semibold mb-2">Do Not Disturb Integration</h4>
+          <h4 class="text-xl font-semibold mb-2">Do Not Disturb integration</h4>
           <p class="text-gray-700">
-             Blocks distractions while allowing important notifications
+            Integrates with DnD mode to ensure notification-free focus
           </p>
         </div>
       </div>
