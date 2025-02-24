@@ -21,14 +21,16 @@
  let dialog;
  document.addEventListener('DOMContentLoaded', () => {
    dialog = document.getElementById('videoDialog');
-   document.getElementById('watchDemo').addEventListener('click', (e) => {
+  document.querySelectorAll('.watchDemo').forEach(element => {
+    element.addEventListener('click', (e) => {
      e.preventDefault();
      dialog.showModal();
-   });
+    });
+    });
  });
 </script>
 
-<section class="flex-grow flex flex-col items-center justify-center text-center">
+<section class="flex-grow flex flex-col items-center justify-center text-center md:pt-24">
  <div class="container mx-auto px-4">
    <h1 class="text-4xl sm:text-6xl font-semibold uppercase tracking-widest text-shadow">
      Pomotto
@@ -40,14 +42,14 @@
      Harness your <span class="highlight">laser-sharp focus</span> and <span class="highlight">sustain energy</span> throughout the day
    </h2>
    <div class="bg-white shadow-md p-2 inline-block rounded-lg border border-gray-200 mt-6">
-      <a id="watchDemo" href="#" class="font-semibold transition-colors mb-10">
+      <a href="#" class="watchDemo font-semibold transition-colors mb-10">
         <img src="/images/pomotto.jpg" alt="Timer" class="w-48 lg:w-64 mx-auto rounded-md" />
       </a>
      
    </div>
 
    <div class="order-1 lg:order-2 mt-5 flex flex-col items-center justify-center gap-4">
-      <a id="watchDemo" href="#" class="text-xl font-semibold transition-colors mb-5">
+      <a href="#" class="watchDemo text-xl font-semibold transition-colors mb-5">
        Watch a demo →
      </a>
      <a href="https://apps.apple.com/us/app/pomotto/id6504365928?mt=12">
