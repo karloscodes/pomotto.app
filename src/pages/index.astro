@@ -7,6 +7,21 @@ const pageDescription =
 	"A pomodoro timer for  the hyper-focused. Harness your laser-sharp focus and sustain energy throughout the day. Minimalist, distraction-free, and designed for deep work.";
 const pageUrl = "https://www.pomotto.app";
 const pageImage = "https://www.pomotto.app/images/pomotto-og-image.png";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pomotto",
+  "applicationCategory": "Productivity",
+  "operatingSystem": "macOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "2.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "description": pageDescription
+};
 ---
 
 <script async src="https://tally.so/widgets/embed.js"></script>
@@ -18,4 +33,8 @@ const pageImage = "https://www.pomotto.app/images/pomotto-og-image.png";
 	image={pageImage}
 >
 	<Hero />
+
+
+	<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
 </LandingLayout>

@@ -28,6 +28,19 @@
     });
     });
  });
+
+ function toggleFaq(button) {
+      // Toggle the content visibility
+      const content = button.nextElementSibling;
+      content.classList.toggle('hidden');
+      
+      // Rotate the chevron
+      const chevron = button.querySelector('svg');
+      chevron.classList.toggle('rotate-180');
+      
+      // Toggle active state styling on the button
+      button.classList.toggle('bg-gray-50');
+    }
 </script>
 
 <section class="flex-grow flex flex-col items-center justify-center text-center md:pt-24">
@@ -91,25 +104,102 @@
      </div>
    </div>
  </div>
- 
-<div class="mt-12 mb-8 w-full">
-  <h3 class="text-2xl font-semibold text-center mb-6">Frequently Asked Questions</h3>
-  <div class="max-w-3xl mx-auto">
-    <details class="faq-item bg-white p-2 rounded-lg ">
-      <summary class="cursor-pointer text-lg font-medium">How is Pomotto different from other Pomodoro apps?</summary>
-      <p class="mt-2 text-gray-500 max-w-2xl mx-auto leading-relaxed">Pomotto’s Sound and Visual Reminders prompt regular breaks without a visible timer —yes, that’s intentional—. With seamless Mac Do Not Disturb integration, you can customize notifications (e.g., receive calendar alerts for meetings or none) and stay hyper-focused without distraction.</p>
-    </details>
 
-    <details class="faq-item bg-white p-2 rounded-lg ">
-      <summary class="cursor-pointer text-lg font-medium">Is Pomotto only for Mac users?</summary>
-      <p class="mt-2 text-gray-500">Yes, Pomotto is designed specifically for Mac users. There's no plan to support other Operating Systems.</p>
-    </details>
-    
-    <details class="faq-item bg-white p-2 rounded-lg ">
-      <summary class="cursor-pointer text-lg font-medium">What if I don’t like forced breaks?</summary>
-      <p class="mt-2 text-gray-500">I recommend you to read why taking breaks it's good for your productivity and energy as counterintuitive as it sounds. <a class="text-gray-900 font-medium underline" target="_blank" href="/why-pomotto">This</a> is a good starting point.</p>
-    </details>
+
+
+<section id="faq" class="py-12 w-5/6">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+    <div class="max-w-4xl mx-auto space-y-4">
+      
+      <!-- FAQ Item 1 -->
+      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
+        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
+          <span class="text-lg font-medium">How’s Pomotto different?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="p-5 border-t border-gray-100 text-gray-600">
+          <p class="text-left mb-4">No ticking clock nagging you, Pomotto uses gentle chimes and flashes to cue breaks. Built for deep focus, not distraction.</p>
+          <ul class="text-left list-disc pl-8 space-y-2">
+            <li>Mac Do Not Disturb sync, dive in, uninterrupted.</li>
+            <li>Smart filtering, key alerts, no noise.</li>
+            <li>No countdown stress, just flow.</li>
+            <li>One-time buy, no subscription trap.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FAQ Item 2 -->
+      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
+        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
+          <span class="text-lg font-medium">Subscription or one-time?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="p-5 border-t border-gray-100 text-gray-600">
+          <p class="text-left mb-4">One-time purchase. Pay once, own it, no subscriptions, no fees.</p>
+          <p class="text-left">Built to last with free updates forever. I’m not here to lock you in.</p>
+        </div>
+      </details>
+
+      <!-- FAQ Item 3 -->
+      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
+        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
+          <span class="text-lg font-medium">Mac-only?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="p-5 border-t border-gray-100 text-gray-600">
+          <p class="text-left mb-4">Yes, macOS only. No Windows or mobile plans.</p>
+          <p class="text-left">Nailing one platform beats half-assing three. Ties tight with Mac’s native tools, simplicity over sprawl.</p>
+        </div>
+      </details>
+      
+      <!-- FAQ Item 4 -->
+      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
+        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
+          <span class="text-lg font-medium">How does it help hyper-focused?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="p-5 border-t border-gray-100 text-gray-600">
+          <p class="text-left mb-4">Pomotto harnesses hyper-focus, keeps you locked in without losing balance.</p>
+          <ul class="text-left list-disc pl-8 space-y-2">
+            <li>Halts endless runs—keeps you present.</li>
+            <li>Pulls you back from rabbit holes.</li>
+            <li>Cues breaks to sustain energy.</li>
+            <li>Mac Do Not Disturb filters noise, keeps essentials.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- FAQ Item 5 -->
+      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
+        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
+          <span class="text-lg font-medium">What if I hate breaks?</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="p-5 border-t border-gray-100 text-gray-600">
+          <p class="text-left mb-4">Breaks feel off, but they sharpen focus—science backs it.</p>
+          <ul class="text-left list-disc pl-8 space-y-2 mb-4">
+            <li>Tune break length to fit you.</li>
+            <li>Skip when you’re in the zone.</li>
+            <li>Ease into your rhythm.</li>
+          </ul>
+          <p class="text-left">See <a href="/why-pomotto" class="text-blue-600 hover:text-blue-800 font-medium">why breaks win</a>.</p>
+        </div>
+      </details>
+
+    </div>
   </div>
-</div>
+</section>
+
 
 </section>
