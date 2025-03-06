@@ -4,6 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.pomotto.app', 
+  site: 'https://pomotto.app',
   integrations: [tailwind(), sitemap()]
 });
