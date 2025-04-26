@@ -1,6 +1,6 @@
 ---
-import { faqData } from "../data/faq";
-// The FAQs in faq.ts now contain all the display data
+import { faqItems } from "../data/faq";
+// Using the simplified FAQ structure
 ---
 
 <style>
@@ -115,30 +115,32 @@ import { faqData } from "../data/faq";
     <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
     <div class="max-w-4xl mx-auto space-y-4">
       
-      {faqData.mainEntity.map((faq, index) => (
+      {faqItems.map((faq) => (
         <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
           <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
-            <span class="text-lg font-medium">{faq.name}</span>
+            <span class="text-lg font-medium">{faq.question}</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
           <div class="p-5 border-t border-gray-100 text-gray-600">
-            {faq.display.paragraphs.map((paragraph) => (
-              <p class="text-left mb-4">{paragraph}</p>
-            ))}
+            <p class="text-left mb-4">{faq.answer}</p>
             
-            {faq.display.bullets && (
+            {faq.bullets && (
               <ul class="text-left list-disc pl-8 space-y-2 mb-4">
-                {faq.display.bullets.map((bullet) => (
+                {faq.bullets.map((bullet) => (
                   <li>{bullet}</li>
                 ))}
               </ul>
             )}
             
-            {faq.display.links && (
+            {faq.secondaryText && (
+              <p class="text-left">{faq.secondaryText}</p>
+            )}
+            
+            {faq.link && (
               <p class="text-left">
-                See <a href={faq.display.links[0].url} class="text-blue-600 hover:text-blue-800 font-medium">{faq.display.links[0].text}</a>.
+                See <a href={faq.link.url} class="text-blue-600 hover:text-blue-800 font-medium">{faq.link.text}</a>.
               </p>
             )}
           </div>
