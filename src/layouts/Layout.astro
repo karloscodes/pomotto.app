@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import { faqData } from "../data/faq";
 
 interface Props {
 	title: string;
@@ -34,6 +35,11 @@ const { title, description, url, image } = Astro.props;
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:url" content={url} />
 		<meta name="twitter:image" content={image} />
+
+		<!-- FAQ Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify(faqData)} />
+
+		<script defer src="https://t.getinfinitymetrics.com/y/api/v1/sdk.js"></script>
 	</head>
 	<body class="bg-white text-gray-900 flex flex-col min-h-screen">
 		<header

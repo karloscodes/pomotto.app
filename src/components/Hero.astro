@@ -1,3 +1,8 @@
+---
+import { faqData } from "../data/faq";
+// The FAQs in faq.ts now contain all the display data
+---
+
 <style>
  .highlight {
    position: relative;
@@ -99,107 +104,49 @@
        </div>
        <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
          <h4 class="text-xl font-semibold mb-2">Do Not Disturb Integration</h4>
-         <p class="text-gray-700">Leverage Mac’s Do Not Disturb to block distractions while allowing critical notifications</p>
+         <p class="text-gray-700">Leverage Mac's Do Not Disturb to block distractions while allowing critical notifications</p>
        </div>
      </div>
    </div>
  </div>
-
-
 
 <section id="faq" class="py-12 w-5/6">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
     <div class="max-w-4xl mx-auto space-y-4">
       
-      <!-- FAQ Item 1 -->
-      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
-        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
-          <span class="text-lg font-medium">How’s Pomotto different?</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </summary>
-        <div class="p-5 border-t border-gray-100 text-gray-600">
-          <p class="text-left mb-4">No ticking clock nagging you, Pomotto uses gentle chimes and flashes to cue breaks. Built for deep focus, not distraction.</p>
-          <ul class="text-left list-disc pl-8 space-y-2">
-            <li>Mac Do Not Disturb sync, dive in, uninterrupted.</li>
-            <li>Smart filtering, key alerts, no noise.</li>
-            <li>No countdown stress, just flow.</li>
-            <li>One-time buy, no subscription trap.</li>
-          </ul>
-        </div>
-      </details>
-
-      <!-- FAQ Item 2 -->
-      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
-        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
-          <span class="text-lg font-medium">Subscription or one-time?</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </summary>
-        <div class="p-5 border-t border-gray-100 text-gray-600">
-          <p class="text-left mb-4">One-time purchase. Pay once, own it, no subscriptions, no fees.</p>
-          <p class="text-left">Built to last with free updates forever. I’m not here to lock you in.</p>
-        </div>
-      </details>
-
-      <!-- FAQ Item 3 -->
-      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
-        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
-          <span class="text-lg font-medium">Mac-only?</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </summary>
-        <div class="p-5 border-t border-gray-100 text-gray-600">
-          <p class="text-left mb-4">Yes, macOS only. No Windows or mobile plans.</p>
-          <p class="text-left">Nailing one platform beats half-assing three. Ties tight with Mac’s native tools, simplicity over sprawl.</p>
-        </div>
-      </details>
+      {faqData.mainEntity.map((faq, index) => (
+        <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
+          <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
+            <span class="text-lg font-medium">{faq.name}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="p-5 border-t border-gray-100 text-gray-600">
+            {faq.display.paragraphs.map((paragraph) => (
+              <p class="text-left mb-4">{paragraph}</p>
+            ))}
+            
+            {faq.display.bullets && (
+              <ul class="text-left list-disc pl-8 space-y-2 mb-4">
+                {faq.display.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
+            )}
+            
+            {faq.display.links && (
+              <p class="text-left">
+                See <a href={faq.display.links[0].url} class="text-blue-600 hover:text-blue-800 font-medium">{faq.display.links[0].text}</a>.
+              </p>
+            )}
+          </div>
+        </details>
+      ))}
       
-      <!-- FAQ Item 4 -->
-      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
-        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
-          <span class="text-lg font-medium">How does it help hyper-focused?</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </summary>
-        <div class="p-5 border-t border-gray-100 text-gray-600">
-          <p class="text-left mb-4">Pomotto harnesses hyper-focus, keeps you locked in without losing balance.</p>
-          <ul class="text-left list-disc pl-8 space-y-2">
-            <li>Halts endless runs—keeps you present.</li>
-            <li>Pulls you back from rabbit holes.</li>
-            <li>Cues breaks to sustain energy.</li>
-            <li>Mac Do Not Disturb filters noise, keeps essentials.</li>
-          </ul>
-        </div>
-      </details>
-
-      <!-- FAQ Item 5 -->
-      <details class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden w-full">
-        <summary class="flex justify-between items-center p-5 cursor-pointer focus:outline-none">
-          <span class="text-lg font-medium">What if I hate breaks?</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-          </svg>
-        </summary>
-        <div class="p-5 border-t border-gray-100 text-gray-600">
-          <p class="text-left mb-4">Breaks feel off, but they sharpen focus—science backs it.</p>
-          <ul class="text-left list-disc pl-8 space-y-2 mb-4">
-            <li>Tune break length to fit you.</li>
-            <li>Skip when you’re in the zone.</li>
-            <li>Ease into your rhythm.</li>
-          </ul>
-          <p class="text-left">See <a href="/why-pomotto" class="text-blue-600 hover:text-blue-800 font-medium">why breaks win</a>.</p>
-        </div>
-      </details>
-
     </div>
   </div>
 </section>
-
 
 </section>

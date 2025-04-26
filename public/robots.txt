@@ -1,3 +1,10 @@
+# Pomotto app robots.txt
 User-agent: *
 Allow: /
+Disallow: /thank-you
+
+# Crawl-delay for rate limiting crawl speed
+Crawl-delay: 10
+
+# Sitemap
 Sitemap: https://pomotto.app/sitemap-index.xml
