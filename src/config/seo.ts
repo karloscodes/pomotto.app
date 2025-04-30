@@ -35,7 +35,7 @@ export const siteUrl: string = "https://www.pomotto.app";
 export const defaultImage: string = "/images/pomotto-og-image.png";
 export const fullDefaultImage: string = `${siteUrl}${defaultImage}`;
 export const defaultDescription: string =
-  "Pomodoro timer to maintain laser focus and sustain energy throughout the day";
+  "A smarter Pomodoro timer to unlock laser focus and consistent energy";
 export const defaultTitle: string = "Pomotto | Deep Work, Done Right";
 
 // Structured data for the homepage
@@ -65,7 +65,7 @@ export const pages: PageCollection = {
   whyPomotto: {
     title: "Pomotto | Why Pomotto?",
     description:
-      "Pomodoro timer to maintain laser focus and sustain energy throughout the day. Minimalist, distraction-free, and designed for deep work.",
+      "A smarter Pomodoro timer to unlock laser focus and consistent energy. Minimalist, distraction-free, and designed for deep work.",
     image: fullDefaultImage,
     url: `${siteUrl}/why-pomotto`,
   },
