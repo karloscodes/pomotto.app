@@ -1,17 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-const pageTitle = "Pomotto | Privacy policy";
-const pageDescription =
-  "A pomodoro timer for  the hyper-focused. Harness your laser-sharp focus and sustain energy throughout the day. Minimalist, distraction-free, and designed for deep work.";
-const pageUrl = "https://www.pomotto.app";
-const pageImage = "https://www.pomotto.app/images/pomotto-og-image.png";
+import { pages } from "../config/seo.ts";
+
+const { title, description, url, image } = pages.privacyPolicy;
 ---
 
 <Layout
-  title={pageTitle}
-  description={pageDescription}
-  url={pageUrl}
-  image={pageImage}
+  title={title}
+  description={description}
+  url={url}
+  image={image}
 >
   <section class="mt-32 mb-10 bg-white">
     <div class="container mx-auto w-11/12 lg:w-6/12">
