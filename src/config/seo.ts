@@ -65,7 +65,7 @@ export const pages: PageCollection = {
   whyPomotto: {
     title: "Pomotto | Why Pomotto?",
     description:
-      "A smarter Pomodoro timer to unlock laser focus and consistent energy. Minimalist, distraction-free, and designed for deep work.",
+      "A smarter Pomodoro timer that takes care of your energy and focus reminding you to take breaks and cutting out distractions",
     image: fullDefaultImage,
     url: `${siteUrl}/why-pomotto`,
   },
@@ -75,13 +75,6 @@ export const pages: PageCollection = {
       "Get in touch with the Pomotto team for questions, feedback, or support.",
     image: fullDefaultImage,
     url: `${siteUrl}/contact`,
-  },
-  thankYou: {
-    title: "Pomotto | Thank You",
-    description:
-      "Thank you for reaching out to the Pomotto team. We'll get back to you soon.",
-    image: fullDefaultImage,
-    url: `${siteUrl}/thank-you`,
   },
   privacyPolicy: {
     title: "Pomotto | Privacy Policy",
