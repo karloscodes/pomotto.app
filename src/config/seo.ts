@@ -25,7 +25,6 @@ interface PageCollection {
   home: PageMetadata;
   whyPomotto: PageMetadata;
   contact: PageMetadata;
-  thankYou: PageMetadata;
   privacyPolicy: PageMetadata;
 }
 
@@ -35,7 +34,7 @@ export const siteUrl: string = "https://www.pomotto.app";
 export const defaultImage: string = "/images/pomotto-og-image.png";
 export const fullDefaultImage: string = `${siteUrl}${defaultImage}`;
 export const defaultDescription: string =
-  "A smarter Pomodoro timer to unlock laser focus and consistent energy";
+  "A smarter Pomodoro timer that takes care of your energy and focus reminding you to take breaks and cutting out distractions";
 export const defaultTitle: string = "Pomotto | Deep Work, Done Right";
 
 // Structured data for the homepage
