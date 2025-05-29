@@ -26,6 +26,7 @@ interface PageCollection {
   whyPomotto: PageMetadata;
   contact: PageMetadata;
   privacyPolicy: PageMetadata;
+  thankYou: PageMetadata;
 }
 
 // Site-wide SEO configuration
@@ -81,5 +82,12 @@ export const pages: PageCollection = {
       "Pomotto's privacy policy details how we handle your data and protect your privacy.",
     image: fullDefaultImage,
     url: `${siteUrl}/privacy-policy`,
+  },
+  thankYou: {
+    title: "Pomotto | Thank You",
+    description:
+      "Thank you for your submission.",
+    image: fullDefaultImage,
+    url: `${siteUrl}/thank-you`,
   },
 }; 
