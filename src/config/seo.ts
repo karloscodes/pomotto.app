@@ -35,8 +35,8 @@ export const siteUrl: string = "https://www.pomotto.app";
 export const defaultImage: string = "/images/pomotto-og-image.png";
 export const fullDefaultImage: string = `${siteUrl}${defaultImage}`;
 export const defaultDescription: string =
-  "A smarter Pomodoro timer that takes care of your energy and focus reminding you to take breaks and cutting out distractions";
-export const defaultTitle: string = "Pomotto | Deep Work, Done Right";
+  "A different Pomodoro timer that takes care of your energy and focus reminding you to take breaks and cutting out distractions";
+export const defaultTitle: string = "Pomotto | Find focus, cut distractions";
 
 // Structured data for the homepage
 export const structuredData: StructuredData = {
@@ -65,7 +65,7 @@ export const pages: PageCollection = {
   whyPomotto: {
     title: "Pomotto | Why Pomotto?",
     description:
-      "A smarter Pomodoro timer that takes care of your energy and focus reminding you to take breaks and cutting out distractions",
+      "A different Pomodoro timer that takes care of your energy and focus reminding you to take breaks and cutting out distractions",
     image: fullDefaultImage,
     url: `${siteUrl}/why-pomotto`,
   },
