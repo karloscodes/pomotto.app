@@ -6,7 +6,7 @@ const personalInfo = {
   name: "Carlos Castellanos",
   handle: "",
   title: "",
-  bio: "I'm a Software Engineer, Engineering Manager, and part-time solopreneur who loves bringing ideas to life. I built InfinityMetrics to track my own websites, and since I use it every day, I'll always keep improving it. It's that simple - I'm just sharing the tools I build for myself.",
+  bio: "I'm a Software Engineer, Engineering Manager, and solopreneur passionate about bringing ideas to life. In a world of endless distractions, I built Pomotto to help me find the focus I needed to work on my own projects. Because I use it every day, I'm committed to constantly improving it. It's that simple - I'm just sharing the tools I build for myself.",
   avatarUrl: "https://avatars.githubusercontent.com/karloscodes",
   socials: [
     {
@@ -28,7 +28,7 @@ const personalInfo = {
 };
 ---
 
-<section class={`py-24 ${isAltBg ? 'bg-gray-50' : ''}`}>
+<section class={`py-24 ${isAltBg ? "bg-gray-50" : ""}`}>
   <div class="container mx-auto max-w-3xl px-4">
     <div class="max-w-4xl mx-auto mb-16 text-center">
       <span
@@ -65,32 +65,40 @@ const personalInfo = {
       </div>
 
       <div class="flex justify-center gap-4">
-        {personalInfo.socials.map((social) => (
-          <a
-            href={social.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:border-gray-300 transition-colors"
-            aria-label={`${social.iconLabel} Profile`}
-          >
-            {social.name === "LinkedIn" && (
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
-              </svg>
-            )}
-            {social.name === "X (Twitter)" && (
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
-            )}
-            {social.name === "Website" && (
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
-              </svg>
-            )}
-          </a>
-        ))}
+        {
+          personalInfo.socials.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:border-gray-300 transition-colors"
+              aria-label={`${social.iconLabel} Profile`}
+            >
+              {social.name === "LinkedIn" && (
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                </svg>
+              )}
+              {social.name === "X (Twitter)" && (
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              )}
+              {social.name === "Website" && (
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                </svg>
+              )}
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>
