@@ -1,88 +1,132 @@
 <style>
- .highlight {
-   position: relative;
-   display: inline-block;
- }
- .highlight::before {
-   content: "";
-   position: absolute;
-   top: 0.2em;
-   left: 0;
-   right: 0;
-   bottom: 0.2em;
-   background: #04f0f8df;
-   z-index: -1;
-   border-radius: 0.2em;
-   transform: rotate(-2deg);
- }
+  .highlight {
+    position: relative;
+    display: inline-block;
+  }
+  .highlight::before {
+    content: "";
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    right: 0;
+    bottom: 0.2em;
+    background: #04f0f8df;
+    z-index: -1;
+    border-radius: 0.2em;
+    transform: rotate(-2deg);
+  }
 </style>
 
 <script>
- let dialog;
- document.addEventListener('DOMContentLoaded', () => {
-   dialog = document.getElementById('videoDialog');
-   document.getElementById('watchDemo').addEventListener('click', (e) => {
-     e.preventDefault();
-     dialog.showModal();
-   });
- });
+  let dialog;
+  document.addEventListener("DOMContentLoaded", () => {
+    dialog = document.getElementById("videoDialog");
+    document.getElementById("watchDemo").addEventListener("click", (e) => {
+      e.preventDefault();
+      dialog.showModal();
+    });
+  });
 </script>
 
-<section class="flex-grow flex flex-col items-center justify-center text-center">
- <div class="container mx-auto px-4">
-   <h1 class="text-4xl sm:text-6xl font-semibold uppercase tracking-widest text-shadow">
-     Pomotto
-   </h1>
-   <h2 class="mt-8 text-2xl text-3xl leading-8">
-     A <span class="highlight">pomodoro</span> timer for <span class="highlight">doers</span>
-   </h2>
-   <h2 class="mb-8 text-2xl text-xl leading-8">
-     <span class="highlight">Maintain laser focus</span> and <span class="highlight">preserve energy</span> throughout the day
-   </h2>
-   <div class="bg-white shadow-md p-2 inline-block rounded-lg border border-gray-200 mt-6">
-     <img src="/images/pomotto.jpg" alt="Timer" class="w-48 lg:w-64 mx-auto rounded-md" />
-   </div>
+<section
+  class="flex-grow flex flex-col items-center justify-center text-center"
+>
+  <div class="container mx-auto px-4">
+    <h1
+      class="text-4xl sm:text-6xl font-semibold uppercase tracking-widest text-shadow"
+    >
+      Pomotto
+    </h1>
+    <h2 class="mt-8 text-2xl text-3xl leading-8">
+      A <span class="highlight">pomodoro</span> timer for <span
+        class="highlight">doers</span
+      >
+    </h2>
+    <h2 class="mb-8 text-2xl text-xl leading-8">
+      <span class="highlight">Maintain laser focus</span> and <span
+        class="highlight">preserve energy</span
+      > throughout the day
+    </h2>
+    <div
+      class="bg-white shadow-md p-2 inline-block rounded-lg border border-gray-200 mt-6"
+    >
+      <img
+        src="/images/pomotto.jpg"
+        alt="Timer"
+        class="w-48 lg:w-64 mx-auto rounded-md"
+      />
+    </div>
 
-   <div class="order-1 lg:order-2 mt-10 flex flex-col items-center justify-center gap-4">
-     <a href="https://apps.apple.com/us/app/pomotto/id6504365928?mt=12">
-       <img src="/images/AppStoreDownload-LG.svg" alt="Download on the App Store" class="w-full max-w-64 mx-auto rounded-md text-shadow" />
-     </a>
-     <a id="watchDemo" href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-       See in action →
-     </a>
-   </div>
+    <div
+      class="order-1 lg:order-2 mt-10 flex flex-col items-center justify-center gap-4"
+    >
+      <a
+        data-infinity-event-name="click:button:download-app-store:hero:cta"
+        href="https://apps.apple.com/us/app/pomotto/id6504365928?mt=12"
+      >
+        <img
+          src="/images/AppStoreDownload-LG.svg"
+          alt="Download on the App Store"
+          class="w-full max-w-64 mx-auto rounded-md text-shadow"
+        />
+      </a>
+      <a
+        id="watchDemo"
+        href="#"
+        class="text-gray-600 hover:text-gray-900 transition-colors"
+      >
+        See in action →
+      </a>
+    </div>
 
-   <dialog id="videoDialog" class="w-full max-w-4xl p-4 rounded-lg backdrop:bg-gray-800/60">
-     <div class="relative">
-       <button 
-         onclick="document.getElementById('videoDialog').close()"
-         class="absolute -top-2 -right-2 bg-white rounded-full p-1 shadow-lg hover:bg-gray-100"
-       >
-         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-         </svg>
-       </button>
-       <video controls class="w-full rounded-lg">
-         <source src="/videos/demo.mp4" type="video/mp4">
-       </video>
-     </div>
-   </dialog>
+    <dialog
+      id="videoDialog"
+      class="w-full max-w-4xl p-4 rounded-lg backdrop:bg-gray-800/60"
+    >
+      <div class="relative">
+        <button
+          onclick="document.getElementById('videoDialog').close()"
+          class="absolute -top-2 -right-2 bg-white rounded-full p-1 shadow-lg hover:bg-gray-100"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <video controls class="w-full rounded-lg">
+          <source src="/videos/demo.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </dialog>
 
-   <div class="order-2 lg:order-1 mt-24 mb-8 w-full">
-     <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-       <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
-         <h4 class="text-xl font-semibold mb-2">Sound Reminders</h4>
-         <p class="text-gray-700">Gentle sounds pull you out of deep focus</p>
-       </div>
-       <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
-         <h4 class="text-xl font-semibold mb-2">Visual Cues</h4>
-         <p class="text-gray-700">Screen flash signals help mark session boundaries</p>
-       </div>
-       <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
-         <h4 class="text-xl font-semibold mb-2">Do Not Disturb</h4>
-         <p class="text-gray-700">Blocks distractions while allowing important notifications</p>
-       </div>
-     </div>
-   </div>
- </div>
+    <div class="order-2 lg:order-1 mt-24 mb-8 w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
+          <h4 class="text-xl font-semibold mb-2">Sound Reminders</h4>
+          <p class="text-gray-700">Gentle sounds pull you out of deep focus</p>
+        </div>
+        <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
+          <h4 class="text-xl font-semibold mb-2">Visual Cues</h4>
+          <p class="text-gray-700">
+            Screen flash signals help mark session boundaries
+          </p>
+        </div>
+        <div class="feature-item bg-white p-4 rounded-lg max-w-xs mx-auto">
+          <h4 class="text-xl font-semibold mb-2">Do Not Disturb</h4>
+          <p class="text-gray-700">
+            Blocks distractions while allowing important notifications
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
